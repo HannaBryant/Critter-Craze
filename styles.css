@@ -11,7 +11,7 @@ body {
     left: 0;
     width: 100%;
     background: #ff1c1c;
-    padding: 15px 40px;
+    padding: 15px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,9 +44,10 @@ body {
 }
 
 .nav-links {
-    display: flex;
+    display: flex; 
     list-style: none;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -206,6 +207,22 @@ form {
     color: #d40000;
     font-weight: 800;
     text-shadow: 2px 2px #ffcc00;
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1.3rem;
+    }
+
+    .logo img {
+        width: 45px;
+        height: auto;
+    }
+
+    .nav-links {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
 }
 
 footer {
