@@ -25,5 +25,9 @@ async function createLead() {
 
         body: JSON.stringify(lead)
                                                                                 
-    })
+    });
+
+    if (response.ok) {
+        form.reset();
+    }
 }
