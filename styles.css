@@ -225,6 +225,10 @@ form {
     }
 }
 
+.price{
+    font-size: 23px;
+}
+
 footer {
     background: #d10000;
     color: #ffe578;

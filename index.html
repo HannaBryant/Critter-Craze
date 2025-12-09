@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body onload="getProducts()">
 
     <nav class="navbar-custom">
         <div class="logo">
@@ -42,107 +42,73 @@
     <div id="products" class="products container">
         <h2>Featured Products</h2>
 
-        <div class="row g-4 mt-4">
-
-            <div class="col-md-3">
-                <div class="product-card">
-                    <h3>Starter Pack</h3>
-                    <p>3 random critters + 1 evolution token.</p>
-                    <img src="assets/crittercraze/starter-pack.png" alt="Starter Pack" class="product-image">
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="product-card">
-                    <h3>Mystery Egg</h3>
-                    <p>Hatch a surprise critter — maybe rare!</p>
-                    <img src="assets/crittercraze/mystery-egg.png" alt="Mystery Egg" class="product-image">
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="product-card">
-                    <h3>Evolution Stones</h3>
-                    <p>Elemental stones for powering up.</p>
-                    <img src="assets/crittercraze/element-stone.png" alt="Element stone" class="product-image">
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="product-card">
-                    <h3>Plush Collection</h3>
-                    <p>Cute & collectible critter plushies.</p>
-                    <img src="assets/crittercraze/plush.png" alt="Plush Toy" class="product-image">
-                </div>
-            </div>
-
+        <div id="productsList" class="row g-4 mt-4">
         </div>
-    </div>
 
-    <div id="critters" class="critters-section">
-        <h2>Meet the Critters!</h2>
-        <h5>Here are a few critters you could <em>Possibly</em> hatch...</h5>
+        <div id="critters" class="critters-section">
+            <h2>Meet the Critters!</h2>
+            <h5>Here are a few critters you could <em>Possibly</em> hatch...</h5>
 
-        <div class="critters-container">
-            <div class="product-card">
-                <img src="assets/crittercraze/fluffy.png" alt="Fluffly Critter" class="product-image">
-                <h3>Fluffly Critter</h3>
-                <p>A tiny, energetic critter that loves exploring and causing cute chaos!</p>
-            </div>
+            <div class="critters-container">
+                <div class="product-card">
+                    <img src="assets/crittercraze/fluffy.png" alt="Fluffly Critter" class="product-image">
+                    <h3>Fluffly Critter</h3>
+                    <p>A tiny, energetic critter that loves exploring and causing cute chaos!</p>
+                </div>
 
-            <div class="product-card">
-                <img src="assets/crittercraze/bouncy.png" alt="Bouncy Critter" class="product-image">
-                <h3>Bouncy Critter</h3>
-                <p>Loves to hop around and make new friends wherever it goes!</p>
-            </div>
+                <div class="product-card">
+                    <img src="assets/crittercraze/bouncy.png" alt="Bouncy Critter" class="product-image">
+                    <h3>Bouncy Critter</h3>
+                    <p>Loves to hop around and make new friends wherever it goes!</p>
+                </div>
 
-            <div class="product-card">
-                <img src="assets/crittercraze/leafy.png" alt="Leafy Critter" class="product-image">
-                <h3>Leafy Critter</h3>
-                <p>A nature-loving critter that blends in with leaves and plants!</p>
+                <div class="product-card">
+                    <img src="assets/crittercraze/leafy.png" alt="Leafy Critter" class="product-image">
+                    <h3>Leafy Critter</h3>
+                    <p>A nature-loving critter that blends in with leaves and plants!</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="signup" class="signup-section">
-        <h2>Join the Craze</h2>
-        <p>Sign up to receive critter news and exclusive items.</p>
+        <div id="signup" class="signup-section">
+            <h2>Join the Craze</h2>
+            <p>Sign up to receive critter news and exclusive items.</p>
 
-        <div class="container mt-4 form-container">
-            <form id="signupForm" onsubmit="event.preventDefault()" class="p-4 shadow-sm bg-white rounded">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" id="name" class="form-control" placeholder="Enter Your Name">
-                </div>
+            <div class="container mt-4 form-container">
+                <form id="signupForm" onsubmit="event.preventDefault()" class="p-4 shadow-sm bg-white rounded">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter Your Name">
+                    </div>
 
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" class="form-control" placeholder=" Enter Your Email">
-                </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder=" Enter Your Email">
+                    </div>
 
-                <div class="mb-5">
-                    <label for="contact" class="form-label">Contact Us</label>
-                    <textarea id="contact" class="form-control" placeholder="Enter Your Message"></textarea>
-                </div>
+                    <div class="mb-5">
+                        <label for="contact" class="form-label">Contact Us</label>
+                        <textarea id="contact" class="form-control" placeholder="Enter Your Message"></textarea>
+                    </div>
 
-                <button type="button" onclick="createLead()" class="btn btn-primary w-100 mt-2">Submit</button>
-            </form>
+                    <button type="button" onclick="createLead()" class="btn btn-primary w-100 mt-2">Submit</button>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <div id="about" class="about">
-        <h2>About CritterCraze</h2>
-        <p>
-            CritterCraze is a magical world full of creatures waiting to be discovered.
-            Start your adventure and build your dream critter team!
-        </p>
-    </div>
+        <div id="about" class="about">
+            <h2>About CritterCraze</h2>
+            <p>
+                CritterCraze is a magical world full of creatures waiting to be discovered.
+                Start your adventure and build your dream critter team!
+            </p>
+        </div>
 
-    <footer>
-        © 2025 CritterCraze. All rights reserved.
-    </footer>
+        <footer>
+            © 2025 CritterCraze. All rights reserved.
+        </footer>
 
-<script src="app.js"></script>
+        <script src="app.js"></script>
 </body>
 
 </html>
